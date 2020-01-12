@@ -3,8 +3,10 @@
 js/
 media/
 .idea/
-/modules.xml
-/vcs.xml
-/web_study.iml
-/encodings.xml
-/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/web_study.iml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/.gitignore
+.idea/workspace.xml
