@@ -9,4 +9,4 @@ media/
 .idea/encodings.xml
 .idea/misc.xml
 .idea/modules.xml
-!/.idea/web_study.iml
+/.idea/web_study.iml
