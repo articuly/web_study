@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-	</head>
-	<body>
-		<script type="text/javascript">
-			function createUser(name,age,sex){
-				var o=new Object()
-				o.name=name
-				o.age=age
-				o.sex=sex
-				o.toString=function(){
-					return "My name is " + o.name + ", I am " + o.age + " year old, I am " + o.sex
-				}
-				return o
-			}
-			lsl=createUser("LSL",30,"male")
-		</script>
-	</body>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    function createUser(name, age, sex) {
+        var o = new Object()
+        o.name = name
+        o.age = age
+        o.sex = sex
+        o.toString = function () {
+            return "My name is " + o.name + ", I am " + o.age + " year old, I am " + o.sex
+        }
+        return o
+    }
+
+    lsl = createUser("LSL", 30, "male")
+</script>
+</body>
 </html>

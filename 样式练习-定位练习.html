@@ -1,56 +1,62 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>CSS定位练习</title>
-		<style type="text/css">
-			.container{
-				border: 2px solid red;
-				width:340px;
-				height:340px;
-				position:relative;
-				margin:0 auto;
-			}
-			.container>div{
-				width:100px;
-				height:100px;
-				background-color: red;
-				text-align: center;
-				color: white;
-				line-height:100px;
-				position:absolute;
-			}
-			.link1{
-				left:20px;
-				top:20px;
-			}
-			.link2{
-				right:20px;
-				top:20px;
-			}
-			.link4{
-				left:20px;
-				bottom:20px;
-			}
-			.link5{
-				right:20px;
-				bottom:20px;
-			}
-			.container>.link3{
-				background-color: blue;
-				color: yellow;
-				left:120px;
-				top:120px;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="container">
-			<div class="link1">box1</div>
-			<div class="link2">box2</div>
-			<div class="link3">box3</div>
-			<div class="link4">box4</div>
-			<div class="link5">box5</div>
-		</div>
-	</body>
+<head>
+    <meta charset="utf-8">
+    <title>CSS定位练习</title>
+    <style type="text/css">
+        .container {
+            border: 2px solid red;
+            width: 340px;
+            height: 340px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .container > div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            text-align: center;
+            color: white;
+            line-height: 100px;
+            position: absolute;
+        }
+
+        .link1 {
+            left: 20px;
+            top: 20px;
+        }
+
+        .link2 {
+            right: 20px;
+            top: 20px;
+        }
+
+        .link4 {
+            left: 20px;
+            bottom: 20px;
+        }
+
+        .link5 {
+            right: 20px;
+            bottom: 20px;
+        }
+
+        .container > .link3 {
+            background-color: blue;
+            color: yellow;
+            left: 120px;
+            top: 120px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="link1">box1</div>
+    <div class="link2">box2</div>
+    <div class="link3">box3</div>
+    <div class="link4">box4</div>
+    <div class="link5">box5</div>
+</div>
+</body>
 </html>

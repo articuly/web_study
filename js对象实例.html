@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-	</head>
-	<body>
-		<script type="text/javascript">
-		var empCount=0
-		//构造函数
-		function Employee(name,salary){
-			this.name=name;
-			this.salary=salary;
-			this.empCount+=1;
-		}
-		Employee.prototype.displayCount=function(){
-			console.log("total employee" + empCount);
-		}
-		Employee.prototype.displayEmployee=function(){
-			console.log("name"+this.name+", salary"+this.salary);
-		}
-		//创建实例
-		var ea=new Employee("a",4000);
-		var eb=new Employee("b",5000);
-		</script>
-	</body>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    var empCount = 0
+
+    //构造函数
+    function Employee(name, salary) {
+        this.name = name;
+        this.salary = salary;
+        this.empCount += 1;
+    }
+
+    Employee.prototype.displayCount = function () {
+        console.log("total employee" + empCount);
+    }
+    Employee.prototype.displayEmployee = function () {
+        console.log("name" + this.name + ", salary" + this.salary);
+    }
+    //创建实例
+    var ea = new Employee("a", 4000);
+    var eb = new Employee("b", 5000);
+</script>
+</body>
 </html>

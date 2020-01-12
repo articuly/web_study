@@ -1,155 +1,172 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html;utf-8"/>
-		<title>新闻列表练习</title>
-		<style type="text/css">
-			h3, ul, li, p{
-				margin:0;
-				padding: 0;
-			}
-			a{
-				text-decoration: none;
-			}
-			a:link{
-				color:blanchedalmond;
-			}
-			a:visited{
-				color:gray;
-			}
-			a:hover{
-				color:gold;
-			}
-			.all{
-				width:800px;
-			}
-			.tab a{
-				display:inline-block;
-				height:40px;
-				width:60px;
-				line-height:40px;
-				text-align:center;
-				border:1px solid #000000;
-				background:#e0e0e0;
-				color:#666;
-			}
-			.tab a:hover{
-				background:#efefef;
-				color:#333;
-			}
-			#new_pic{
-				margin-top: 15px;
-				width:500px;
-				float:left;
-			}
-			#new_pic li{
-				list-style:none;
-				width:100%;
-			}
-			.pic_left{
-				float: left;
-				width:150px;
-			}
-			.pic_right{
-				padding-left: 20px;
-				float:left;
-				width:60%;
-			}
-			.pic_right p{
-				height:48px;
-				line-height: 24px;
-				overflow: hidden;
-			}
-			.media{
-				float: left;
-				font-size:12px;
-			}
-			.date{
-				float:right;
-				font-size: 10px;
-			}
-			#tips{
-				font-size: 11px;
-				color:#969696;
-				width:100%;
-				text-align:center;
-			}
-			#new{
-				margin-top:15px;
-				width:150px;
-				float:left;
-				border-left:3px solid #efefef;
-				font-family: "微软雅黑";
-				padding:10px;
-			}
-			#new li{
-				list-style: none;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="all">
-			<!--options-->
-			<div class="tab">
-				<a href="">选项1</a>
-				<a href="">选项2</a>
-				<a href="">选项3</a>
-			</div>
-		<div id="new_pic">
-			<ul>
-				<li>
-					<img class="pic_left" src="media/1.jpeg"/>
-					<div class="pic_right">
-						<h3><a href="">图文新闻列表标题</a></h3>
-						<p>asynchat是asyncore的高级封装模块，可以简化类似http这样的请求/响应简单的网络模式开发</p>
-						<p><span class="media">新华社</span>
-							<em class='date'>2018-09-12</em>
-						</p>
-					</div>
-				</li>
-				<li>
-					<img class="pic_left" src="media/1.jpeg"/>
-					<div class="pic_right">
-						<h3><a href="">图文新闻列表标题</a></h3>
-						<p>asynchat是asyncore的高级封装模块，可以简化类似http这样的请求/响应简单的网络模式开发</p>
-						<p><span class="media">新华社</span>
-							<em class='date'>2018-09-12</em>
-						</p>
-					</div>
-				</li>
-				<li>	
-					<img class="pic_left" src="media/1.jpeg"/>
-					<div class="pic_right">
-						<h3><a href="">图文新闻列表标题</a></h3>
-						<p>asynchat是asyncore的高级封装模块，可以简化类似http这样的请求/响应简单的网络模式开发</p>
-						<p><span class="media">新华社</span>
-							<em class='date'>2018-09-12</em>
-						</p>
-					</div>
-				</li>
-				<li>
-					<img class="pic_left" src="media/1.jpeg"/>
-					<div class="pic_right">
-						<h3><a href="">图文新闻列表标题</a></h3>
-						<p>asynchat是asyncore的高级封装模块，可以简化类似http这样的请求/响应简单的网络模式开发</p>
-						<p><span class="media">新华社</span>
-							<em class='date'>2018-09-12</em>
-						</p>
-					</div>
-					</li>
-				</ul>
-			</div>
-					
-					<div id="news">
-						<h3>新闻列表</h3>
-						<ul>
-							<li><a href="">标题1</a></li>
-							<li><a href="">标题1</a></li>
-							<li><a href="">标题1</a></li>
-							<li><a href="">标题1</a></li>
-							<li><a href="">标题1</a></li>
-						</ul>
-					</div>
-			</div>
-	</body>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;utf-8"/>
+    <title>新闻列表练习</title>
+    <style type="text/css">
+        h3, ul, li, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:link {
+            color: blanchedalmond;
+        }
+
+        a:visited {
+            color: gray;
+        }
+
+        a:hover {
+            color: gold;
+        }
+
+        .all {
+            width: 800px;
+        }
+
+        .tab a {
+            display: inline-block;
+            height: 40px;
+            width: 60px;
+            line-height: 40px;
+            text-align: center;
+            border: 1px solid #000000;
+            background: #e0e0e0;
+            color: #666;
+        }
+
+        .tab a:hover {
+            background: #efefef;
+            color: #333;
+        }
+
+        #new_pic {
+            margin-top: 15px;
+            width: 500px;
+            float: left;
+        }
+
+        #new_pic li {
+            list-style: none;
+            width: 100%;
+        }
+
+        .pic_left {
+            float: left;
+            width: 150px;
+        }
+
+        .pic_right {
+            padding-left: 20px;
+            float: left;
+            width: 60%;
+        }
+
+        .pic_right p {
+            height: 48px;
+            line-height: 24px;
+            overflow: hidden;
+        }
+
+        .media {
+            float: left;
+            font-size: 12px;
+        }
+
+        .date {
+            float: right;
+            font-size: 10px;
+        }
+
+        #tips {
+            font-size: 11px;
+            color: #969696;
+            width: 100%;
+            text-align: center;
+        }
+
+        #new {
+            margin-top: 15px;
+            width: 150px;
+            float: left;
+            border-left: 3px solid #efefef;
+            font-family: "微软雅黑";
+            padding: 10px;
+        }
+
+        #new li {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+<div class="all">
+    <!--options-->
+    <div class="tab">
+        <a href="">选项1</a>
+        <a href="">选项2</a>
+        <a href="">选项3</a>
+    </div>
+    <div id="new_pic">
+        <ul>
+            <li>
+                <img class="pic_left" src="media/1.jpeg"/>
+                <div class="pic_right">
+                    <h3><a href="">图文新闻列表标题</a></h3>
+                    <p>asynchat是asyncore的高级封装模块，可以简化类似http这样的请求/响应简单的网络模式开发</p>
+                    <p><span class="media">新华社</span>
+                        <em class='date'>2018-09-12</em>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <img class="pic_left" src="media/1.jpeg"/>
+                <div class="pic_right">
+                    <h3><a href="">图文新闻列表标题</a></h3>
+                    <p>asynchat是asyncore的高级封装模块，可以简化类似http这样的请求/响应简单的网络模式开发</p>
+                    <p><span class="media">新华社</span>
+                        <em class='date'>2018-09-12</em>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <img class="pic_left" src="media/1.jpeg"/>
+                <div class="pic_right">
+                    <h3><a href="">图文新闻列表标题</a></h3>
+                    <p>asynchat是asyncore的高级封装模块，可以简化类似http这样的请求/响应简单的网络模式开发</p>
+                    <p><span class="media">新华社</span>
+                        <em class='date'>2018-09-12</em>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <img class="pic_left" src="media/1.jpeg"/>
+                <div class="pic_right">
+                    <h3><a href="">图文新闻列表标题</a></h3>
+                    <p>asynchat是asyncore的高级封装模块，可以简化类似http这样的请求/响应简单的网络模式开发</p>
+                    <p><span class="media">新华社</span>
+                        <em class='date'>2018-09-12</em>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div id="news">
+        <h3>新闻列表</h3>
+        <ul>
+            <li><a href="">标题1</a></li>
+            <li><a href="">标题1</a></li>
+            <li><a href="">标题1</a></li>
+            <li><a href="">标题1</a></li>
+            <li><a href="">标题1</a></li>
+        </ul>
+    </div>
+</div>
+</body>
 </html>

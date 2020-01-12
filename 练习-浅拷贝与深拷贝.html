@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-	</head>
-	<body>
-		<script type="text/javascript">
-			// 写一个copy对象函数，实现两个值相等，但不是同一对象
-			// 深拷贝
-			function copyObject(obj){
-				var o=new Object()
-				for (i in obj){
-					if (typeof(obj[i])=="object"){
-						o[i]=copyObject(obj[i])
-					} else {
-						o[i]=obj[i]
-					}
-				}
-				return o
-			}
-			// 浅拷贝
-			function shallowCopy(obj){
-				var o=new Object()
-				for (i in obj){
-					o[i]=obj[i]
-				}
-				return o
-			}
-			var lsl=new Object()
-			lsl.name={first:"Shaolong",last:"Lin"}
-			lsl.age=30
-			lsl2=copyObject(lsl)
-			lsl3=shallowCopy(lsl)
-		</script>
-	</body>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    // 写一个copy对象函数，实现两个值相等，但不是同一对象
+    // 深拷贝
+    function copyObject(obj) {
+        var o = new Object()
+        for (i in obj) {
+            if (typeof (obj[i]) == "object") {
+                o[i] = copyObject(obj[i])
+            } else {
+                o[i] = obj[i]
+            }
+        }
+        return o
+    }
+
+    // 浅拷贝
+    function shallowCopy(obj) {
+        var o = new Object()
+        for (i in obj) {
+            o[i] = obj[i]
+        }
+        return o
+    }
+
+    var lsl = new Object()
+    lsl.name = {first: "Shaolong", last: "Lin"}
+    lsl.age = 30
+    lsl2 = copyObject(lsl)
+    lsl3 = shallowCopy(lsl)
+</script>
+</body>
 </html>
