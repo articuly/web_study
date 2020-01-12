@@ -3,8 +3,8 @@
 js/
 media/
 .idea/
-!/.idea/web_study.iml
-!/.idea/vcs.xml
-!/.idea/encodings.xml
-!/.idea/misc.xml
-!/.idea/modules.xml
+/modules.xml
+/vcs.xml
+/web_study.iml
+/encodings.xml
+/misc.xml
