@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			reg1=new RegExp('^[a-zA-Z]\\w{4,14}$')
+			reg2=new RegExp('(kf)|(kefu)|(admin)|(Admin)')
+			function legalName(name){
+				if (! reg1.test(name)){
+					return false
+				}
+				if (reg2.test(name)){
+					return false
+				}
+				return true
+			}
+		</script>
+	</body>
+</html>

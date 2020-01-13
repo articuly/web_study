@@ -14,13 +14,13 @@
     function showWeek(date) {
         switch (date.getDay()) {
             case 1:
-                console.log(date.toLocaleStrint(), "=> Monday")
+                console.log(date.toLocaleString(), "=> Monday")
                 break
             case 2:
                 console.log(date.toLocaleString(), "Tuesday")
                 break
             case 3:
-                console.log(date.tolocalestring(), "=>Wednesday")
+                console.log(date.toLocaleString(), "=>Wednesday")
                 break
             case 4:
                 console.log(date.toLocaleString(), "=>Thursday")
@@ -36,9 +36,11 @@
                 break
         }
     }
-
-    a = new Date
-    showWeek(a)
+    a = new Date()
+	for (i=0;i<14;i++){
+		showWeek(a)
+		a.setDate(a.getDate()+1)
+	}
 </script>
 </body>
 </html>

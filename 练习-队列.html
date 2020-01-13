@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//先进先出的队列，只有进put和出get方法
+			var queue=new Object()
+			queue.data=[]
+			queue.put=function(val){
+				queue.data.push(val)
+			}
+			queue.get=function(){
+				return queue.data.shift()
+			}
+			queue.put(1)
+			queue.put(2)
+			queue.put(3)
+			console.log(queue.data)
+		</script>
+	</body>
+</html>

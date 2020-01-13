@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//排序
+			arr1=[{name:"luxp"},{name:"linsl"},{name:"artic"},{name:"laoqi"},{name:"oven"}]
+			function compare(val1,val2){
+				if (val1.name>val2.name){
+					return true
+				} else {
+					return false
+				}
+			}
+			sorted=arr1.sort(compare)
+			//过滤
+			arr2=[]
+			for (i=0;i<=20;i++){
+				arr2.push(i)
+			}
+			arr3=arr2.filter(function(val){
+				if (val % 5==0){
+					return true
+				}
+			})
+		</script>
+	</body>
+</html>

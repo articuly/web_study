@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 找出今后500年内的闰年
+			date=new Date()
+			yr=date.getFullYear(date)
+			for (i=0;i<=500;i++,yr++){
+				if (yr%4==0 && yr%100!=0){
+					console.log(yr)
+				} 
+				if (yr%400==0){
+					console.log(yr)
+				}
+			}
+		</script>
+	</body>
+</html>

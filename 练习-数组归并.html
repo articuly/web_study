@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			arr1=[['good1',1000,5000],['good2',1200,3600],['good3',1500,6000],['good4',1000,2000],['good5',1300,5200],['good6',1400,5600]]
+			function compare(pre,cur){
+				console.log('current',cur,cur[0])
+				if (cur[1]>1200){
+					return pre+cur[2]
+				} else {
+					return pre
+				}
+			}
+			// 首个pre补充为0
+			res=arr1.reduce(compare,0)
+		</script>
+	</body>
+</html>
