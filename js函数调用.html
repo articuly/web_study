@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function myFunc(property){
+				console.log(this)
+				console.log(this.name)
+				console.log(this[property])
+			}
+			var o1={name:"lsl",sex:"male"}
+			var o2={name:"lsw",sex:"female"}
+			myFunc.call(o1,"sex")
+			myFunc.call(o2,"name")
+			myFunc.apply(o1,["sex"])
+		</script>
+	</body>
+</html>
