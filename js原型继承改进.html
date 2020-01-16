@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function Person(name,age,sex,family){
+				this.name=name
+				this.age=age
+				this.sex=sex
+				this.hands=2
+				this.legs=2
+				this.family=family
+				this.say=function(){console.log("my family has",this.family)}
+			}
+
+			function Man(name,age,sex){
+				console.log(Man.prototype)
+				console.log(Man.prototype.constructor)
+				Man.prototype.constructor.call(this,name,age,sex,[])
+			}
+			Man.prototype = new Person()
+			Man.prototype.hi=function(){console.log("welcome here")}
+			a=new Man("artic",25,"male")
+			a.family.push("father")
+		</script>
+	</body>
+</html>

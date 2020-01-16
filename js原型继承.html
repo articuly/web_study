@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function Person(name,age,sex){
+				this.hands=2
+				this.legs=2
+				this.family=[]
+			}
+			
+			function Man(name,age){
+				this.name=name
+				this.age=age
+				this.sex="male"
+			}
+			Man.prototype = new Person()
+			Man.prototype.say=function(){console.log("welcome here")}
+				
+			function Woman(name,age){
+				this.name=name
+				this.age=age
+				this.sex="female"
+			}
+			Woman.prototype = new Person()
+			Woman.prototype.say=function(){console.log("what can I do for you.")}
+			a=new Man("art",23)
+			l=new Woman("lily",21)
+		</script>
+	</body>
+</html>
