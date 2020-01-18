@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			alert("hello!")
+			function test1(){
+				i=0
+				while (i<5){
+					alert("do you want to go?")
+					i++
+				}
+			}
+			function test2(){
+				i=0
+				if (confirm("do you want to leave?") && i<5){
+					test2()
+					i++
+					}
+			}
+		</script>
+	</body>
+</html>

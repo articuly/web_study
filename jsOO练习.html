@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function Vehicle(){}
+			Vehicle.prototype.move=function(){
+				console.log("moving speed:",this.speed)
+			}
+			function Bike(power){
+				this.speed=15
+				this.wheel=2
+				this.power=power
+				Bike.prototype.constructor.call(this)
+			}
+			Bike.prototype=new Vehicle
+			function Car(power){
+				this.speed=100
+				this.wheel=4
+				this.power=power
+				Car.prototype.constructor.call(this)
+			}
+			Car.prototype=new Vehicle
+			var b1=new Bike("man")
+			var c1=new Car("motor")
+		</script>
+	</body>
+</html>
