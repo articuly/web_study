@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			false==undefined
+			undefined==null
+			null==false
+			false==0
+			null==0
+			undefined==0
+			NaN==false
+			console.log([])  //Array
+			console.log({})  //Object
+			[]+{}  //String "[object Object]"
+			{}+[]  // Number 0
+			/*
+			两个对象相加会将其转换为原始值。
+			[]转成原始值时，先用valueOf()方法返回数组本身this。因为this不是原始值，再调用toString()，得到空字符串。
+			{}转成原始值时，先用valueOf()方法返回Object本身this。因为this不是原始值，再调用toString()，得到"[object Object]"。
+			第五题就是空字字符串加另一个字符串，然后就得到"[object Object]"，这个结果。
+			Javascript在第六题中，将第一个{}解释成一个空代码块并忽略了它，于是只计算+[]的结果。
+			+[]这个表达式最后会以Number()函数求值。[]转成空字符串，后，+[]代表Number("")，于是结果为0。
+			*/
+		</script>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			myName = "zhangsan"
+			function myFun(){
+			   console.log("hello world")
+			}
+			obj = {
+			    myName: "luxp",
+			    myFun: function(){console.log(this.myName)},
+			    success: function(){
+			           setTimeout(this.myFun, 3000)
+			     }
+			}
+			obj.success()
+			obj = {
+			    myName: "luxp",
+			    myFun: function(){console.log(this.myName)},
+			    success1: function(){
+			           setTimeout(this.myFun, 3000)
+			     }
+			}
+			obj.success()
+			/*
+			执行3秒后会输出两行zhangsan
+			"zhangsan"
+			"zhangsan"
+			原代代码定义一个myName变量，一个myFun()函数，两次定义了obj对象，两次调用obj.success()方法。
+			obj对象包括有三个键，分别指向一个变量和两个方法。
+			this还可以作为某个对象的方法调用，这时this就指这个上级对象。所以它指向了obj.myFun的函数。
+			当this在某个函数里时，它属于全局性调用，因此this就代表全局对象。全局对象的变量myName为"zhangsan"，所以函数在控制台输出了"zhangsan"。
+			*/
+		</script>
+	</body>
+</html>

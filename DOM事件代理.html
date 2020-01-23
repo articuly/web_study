@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="page">
+			<a href="javascript:goPage(1)" data-page=1>1</a>
+			<a href="javascript:goPage(2)" data-page=2>2</a>
+			<a href="javascript:goPage(3)" data-page=3>3</a>
+			<a href="javascript:goPage(4)" data-page=4>4</a>
+		</div>
+		<script type="text/javascript">
+			function goPage(i){
+				console.log(i)
+			}
+			// 事件代理
+			page=document.querySelector(".page")
+			page.onclick=function(event){
+				event.preventDefault()
+				console.log(event.target)
+				pageNumber=event.target.dataset.page
+				console.log(pageNumber)
+			}
+		</script>
+	</body>
+</html>
