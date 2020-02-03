@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>水晶骰子效果</title>
+		<style type="text/css">
+			img{
+				opacity: 0.5;
+				box-shadow: 1px 1px 10px greenyellow;
+			}
+			.stage>img{
+				position: absolute;
+				left:0;
+				top:0;
+				width: 200px;
+				height: 200px;
+			}
+			.stage{
+				position: absolute;
+				left:200px;
+				top:200px;
+				width:200px;
+				height:200px;
+				transform-style: preserve-3d;
+				transform: rotateX(10deg) rotateY(0deg);
+				animation: img_roate 5s linear infinite;
+			}
+			@-webkit-keyframes img_roate{
+				from{
+					transform: rotateX(-30deg) rotateY(10deg);
+				}
+				to{
+					transform: rotateX(-30deg) rotateY(1090deg);
+				}
+			}
+
+			img:nth-child(1){
+				transform: translateZ(100px);
+			}
+			img:nth-child(2){
+				transform: rotateY(180deg) translateZ(100px);
+			}
+			img:nth-child(3){
+				transform: rotateY(90deg) translateZ(100px);
+			}
+			img:nth-child(4){
+				transform: rotateY(-90deg) translateZ(100px);
+			}
+			img:nth-child(5){
+				transform: rotateX(90deg) translateZ(100px);
+			}
+			img:nth-child(6){
+				transform: rotateX(-90deg) translateZ(100px)
+			}
+		</style>
+	</head>
+	<body>
+		<div class="stage">
+			<img src="img/6-1.jpg"/>
+			<img src="img/6-2.jpg"/>
+			<img src="img/6-3.jpg"/>
+			<img src="img/6-4.jpg"/>
+			<img src="img/6-5.jpg"/>
+			<img src="img/6-6.jpg"/>
+		</div>
+	</body>
+</html>

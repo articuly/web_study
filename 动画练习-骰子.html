@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>骰子</title>
+		<style type="text/css">
+			.box{
+				position: relative;
+				left: 100px;
+				width: 300px;
+				height: 300px;
+				border: 1px solid yellow;
+				transform-style: preserve-3d;
+				transform:rotateX(-10deg);
+				animation: round 6s linear infinite;
+			}
+			@-webkit-keyframes round{
+				from{transform: rotateX(-10deg) rotateY(0deg) rotateZ(0deg);}
+				to{transform: rotateX(-10deg) rotateY(360deg) rotateZ(360deg);}
+			}
+			.face{
+				position: absolute;
+				left: 0;
+				top:0;
+				margin: auto;
+				width: 300px;
+				height: 300px;
+				border: 2px solid black;
+				border-radius: 50px;
+			}
+			.point{
+				margin: auto;
+				background: red;
+				border-radius: 50%;
+			}
+			.face1{
+				transform: translateZ(150px);
+			}
+			/* 定义了1点的大小，1点比其他的点要大 */
+			.point1{
+				margin: -webkit-calc(50% - 40px);
+				width:80px;
+				height:80px;
+			}
+			/* 2点面的样式 */
+			.face2{
+				transform: rotateX(180deg) translateZ(150px);
+			}
+			.face2>div:first-child{
+				margin-top: -webkit-calc(50% - 60px);
+			}
+			/* 2点， 3点，4点一样大 */
+			.point2,.point3,.point4{
+				width: 60px;
+				height: 60px;
+			}
+			/* 第三面定义 */
+			.face3{
+				transform: rotateX(90deg) translateZ(150px);
+			}
+			.point3:first-child{
+				margin-top: -webkit-calc(50%);
+				margin-left: -webkit-calc(50% - 100px);
+			}
+			/* 其余两个点的位置 */
+			.face3 .point3,.point4{
+				float: left;
+				margin-top: -webkit-calc(50% - 60px);
+			}
+			/* 第四个面的定义 */
+			.face4{
+				transform: rotateX(-90deg) translateZ(150px);
+			}
+			/* 使用li排列4个点 */
+			.face4 ul{
+				margin: -webkit-calc(50% - 60px);
+				padding: 0;
+				width:130px;
+				height: 130px;
+				border:1px solid red;
+			}
+			.face4>ul>li{
+				float: left;
+				list-style: none;
+				width: 60px;
+				height: 60px;
+				border-radius: 30px;
+				background: red;
+				border: 1px solid red;
+			}
+			/* 5，6面的点的排列方式是一样的 */
+			.face5{
+				transform: rotateY(90deg) translateZ(150px);
+			}
+			.face6{
+				transform: rotateY(-90deg) translateZ(150px);
+			}
+			.face5 ul,.face6 ul{
+				margin: -webkit-calc(50% - 70px);
+				padding: 0;
+				width: 130px;
+				height: 130px;
+				border: 1px solid red;
+			}
+			.face5>ul>li,.face6>ul>li{
+				float: left;
+				list-style: none;
+				width: 60px;
+				height: 60px;
+				border-radius: 30px;
+				background: red;
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<!-- face样式统一定义了六个面的大小属性
+			     每个面的位置由各自的第二个class,face1~face2各自定义
+			 -->
+			 <div class="face face1">
+				 <div class="point point1"></div>
+			 </div>
+			 <div class="face face2">
+				 <div class="point point2"></div>
+				 <div class="point point2"></div>
+			 </div>
+			 <div class="face face3">
+				 <div class="point point3"></div>
+				 <div class="point point3"></div>
+				 <div class="point point3"></div>
+			 </div>
+			 <div class="face face4">
+				 <ul>
+					 <li></li>
+					 <li></li>
+					 <li></li>
+					 <li></li>
+				 </ul>
+			 </div>
+			 <div class="face face5">
+				 <ul>
+					 <li></li>
+					 <li></li>
+					 <li></li>
+					 <li></li>
+					 <li></li>
+				 </ul>
+			 </div>
+			 <div class="face face6">
+				 <ul>
+					 <li></li>
+					 <li></li>
+					 <li></li>
+					 <li></li>
+					 <li></li>
+					 <li></li>
+				 </ul>
+			 </div>
+		</div>
+	</body>
+</html>
