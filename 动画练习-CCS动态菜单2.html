@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>动态菜单2</title>
+		<style type="text/css">
+			.nav li{
+				width: 200px;
+				height: 30px;
+				overflow: hidden;
+				transition-duration: 2s;
+			}
+			.nav li>ul{
+				position: relative;
+				left: 200px;
+				transition-duration: 3s;
+			}
+			.nav li:hover{
+				height: 110px;
+			}
+			.nav li:hover>ul{
+				left: 0;
+				background: #0000FF;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="nav">
+			<li>链接1
+				<ul class="submenu">
+					<li>子链接1</li>
+					<li>子链接2</li>
+					<li>子链接3</li>
+					<li>子链接4</li>
+					<li>子链接5</li>
+				</ul>
+			</li>
+			<li>链接2</li>
+			<li>链接3</li>
+			<li>链接4</li>
+			<li>链接5</li>
+		</ul>
+	</body>
+</html>

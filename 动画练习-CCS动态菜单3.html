@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>动态菜单3</title>
+		<style type="text/css">
+			.dock a{
+				display: inline-block;
+				float: left;
+				width: 80px;
+				height: 80px;
+				line-height: 80px;
+				text-align: center;
+				border: 3px solid yellow;
+				border-radius: 50%;
+				background: #d0a0c0;
+				transition-duration: 2s;
+				transition-timing-function: ease-in-out;
+			}
+			.dock a:hover{
+				transform: scale(0.5);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="dock">
+			<a href="">日历</a>
+			<a href="">keynote</a>
+			<a href="">number</a>
+		</div>
+		<div style="clear: both"></div>
+	</body>
+</html>
